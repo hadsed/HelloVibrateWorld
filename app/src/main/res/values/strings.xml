@@ -9,7 +9,6 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_display_message">My Massagee</string>
-    <string name="title_activity_vibrate">VibrateActivity</string>
     <string name="title_activity_show_sensors">ShowSensorsActivity</string>
 
 </resources>
