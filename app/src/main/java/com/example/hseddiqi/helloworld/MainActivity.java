@@ -47,6 +47,11 @@ public class MainActivity extends ActionBarActivity {
         startService(intent);
     }
 
+    public void showSensors(View view) {
+        Intent intent = new Intent(this, ShowSensorsActivity.class);
+        startActivity(intent);
+    }
+
     // Called when user hits the send button
     public void sendMessage(View view) {
         Intent intent = new Intent(this, DisplayMessageActivity.class);

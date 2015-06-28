@@ -30,6 +30,11 @@
             android:enabled="true"
             android:exported="true" >
         </service>
+
+        <activity
+            android:name=".ShowSensorsActivity"
+            android:label="@string/title_activity_show_sensors" >
+        </activity>
     </application>
 
 </manifest>
