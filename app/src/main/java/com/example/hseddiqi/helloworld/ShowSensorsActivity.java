@@ -29,9 +29,12 @@ public class ShowSensorsActivity extends ActionBarActivity implements SensorEven
     private TextView accelXVal;
     private TextView accelYVal;
     private TextView accelZVal;
-    private TextView orientXVal;
-    private TextView orientYVal;
-    private TextView orientZVal;
+    private TextView orientXValDeg;
+    private TextView orientYValDeg;
+    private TextView orientZValDeg;
+    private TextView orientXValRad;
+    private TextView orientYValRad;
+    private TextView orientZValRad;
     private TextView magnetoXVal;
     private TextView magnetoYVal;
     private TextView magnetoZVal;
@@ -52,22 +55,15 @@ public class ShowSensorsActivity extends ActionBarActivity implements SensorEven
         accelXVal = (TextView) findViewById(R.id.accel_x_value);
         accelYVal = (TextView) findViewById(R.id.accel_y_value);
         accelZVal = (TextView) findViewById(R.id.accel_z_value);
-        orientXVal = (TextView) findViewById(R.id.orient_x_value);
-        orientYVal = (TextView) findViewById(R.id.orient_y_value);
-        orientZVal = (TextView) findViewById(R.id.orient_z_value);
+        orientXValDeg = (TextView) findViewById(R.id.orient_x_value_deg);
+        orientYValDeg = (TextView) findViewById(R.id.orient_y_value_deg);
+        orientZValDeg = (TextView) findViewById(R.id.orient_z_value_deg);
+        orientXValRad = (TextView) findViewById(R.id.orient_x_value_rad);
+        orientYValRad = (TextView) findViewById(R.id.orient_y_value_rad);
+        orientZValRad = (TextView) findViewById(R.id.orient_z_value_rad);
         magnetoXVal = (TextView) findViewById(R.id.magneto_x_value);
         magnetoYVal = (TextView) findViewById(R.id.magneto_y_value);
         magnetoZVal = (TextView) findViewById(R.id.magneto_z_value);
-        // initialize them
-        accelXVal.setText("0.00");
-        accelYVal.setText("0.00");
-        accelZVal.setText("0.00");
-        orientXVal.setText("0.00");
-        orientYVal.setText("0.00");
-        orientZVal.setText("0.00");
-        magnetoXVal.setText("0.00");
-        magnetoYVal.setText("0.00");
-        magnetoZVal.setText("0.00");
     }
 
     @Override
@@ -91,9 +87,12 @@ public class ShowSensorsActivity extends ActionBarActivity implements SensorEven
             accelXVal.setText(String.format("%16f", mLastAccelerometer[0]));
             accelYVal.setText(String.format("%16f", mLastAccelerometer[1]));
             accelZVal.setText(String.format("%16f", mLastAccelerometer[2]));
-            orientXVal.setText(String.format("%16f", azimuthDegs));
-            orientYVal.setText(String.format("%16f", pitchDegs));
-            orientZVal.setText(String.format("%16f", rollDegs));
+            orientXValDeg.setText(String.format("%16f", azimuthDegs));
+            orientYValDeg.setText(String.format("%16f", pitchDegs));
+            orientZValDeg.setText(String.format("%16f", rollDegs));
+            orientXValRad.setText(String.format("%16f", azimuthRads));
+            orientYValRad.setText(String.format("%16f", pitchRads));
+            orientZValRad.setText(String.format("%16f", rollRads));
             magnetoXVal.setText(String.format("%16f", mLastMagnetometer[0]));
             magnetoYVal.setText(String.format("%16f", mLastMagnetometer[1]));
             magnetoZVal.setText(String.format("%16f", mLastMagnetometer[2]));
